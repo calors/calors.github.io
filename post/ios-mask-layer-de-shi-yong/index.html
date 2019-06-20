@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" >
 
-<title>关于 | Gridea</title>
+<title>iOS mask layer的使用。 | Gridea</title>
 <meta name="description" content="温故而知新">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -98,14 +98,46 @@
       <div class="main-container">
         <div class="content-container" data-aos="fade-up">
           <div class="post-detail">
-            <h2 class="post-title">关于</h2>
-            <div class="post-date">2019-01-25</div>
+            <h2 class="post-title">iOS mask layer的使用。</h2>
+            <div class="post-date">2019-06-20</div>
             
             <div class="post-content">
-              <p>这是关于的页面，可以在这里向世界介绍你！</p>
+              <pre><code>- (void)showWithView:(UIView *)fromView inContainer:(UIView *)container {
+CGRect fromRect = [fromView convertRect:fromView.bounds toView:self];
+//获取整块画布path
+UIBezierPath *bpath = [UIBezierPath bezierPathWithRect:self.bounds];
+//贝塞尔曲线 画出了镂空区域
+//这边需要注意的是 , 如果想保留圆以外的部分 , clockwise (顺时针方向) 要选为NO , 如果想保留矩形以外的部分 , 矩形需要反方向绘制path .
+[bpath appendPath:[[UIBezierPath bezierPathWithRoundedRect:fromRect cornerRadius:6] bezierPathByReversingPath]];
+
+//创建一个CAShapeLayer 图层
+CAShapeLayer *shapeLayer = [CAShapeLayer layer];
+shapeLayer.path = bpath.CGPath;
+
+//添加图层蒙板
+self.maskview.layer.mask = shapeLayer;
+
+[container addSubview:self]; }</code></pre>
 
             </div>
             
+              <div class="tag-container">
+                
+                  <a href="https://calors.github.io/tag/DB9KGw0Dh" class="tag">
+                    iOS
+                  </a>
+                
+              </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://calors.github.io/post/hello-gridea">
+                  <h3 class="post-title">
+                    Hello Gridea
+                  </h3>
+                </a>
+              </div>
             
 
             
