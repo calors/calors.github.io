@@ -1,19 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://calors.github.io</id>
-    <title>Gridea</title>
-    <updated>2019-06-20T07:38:06.097Z</updated>
+    <title>成长</title>
+    <updated>2020-04-19T17:57:41.228Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://calors.github.io"/>
     <link rel="self" href="https://calors.github.io/atom.xml"/>
-    <subtitle>温故而知新</subtitle>
+    <subtitle>每天问自己一遍，今天是否有所“成长”？</subtitle>
     <logo>https://calors.github.io/images/avatar.png</logo>
     <icon>https://calors.github.io/favicon.ico</icon>
-    <rights>All rights reserved 2019, Gridea</rights>
+    <rights>All rights reserved 2020, 成长</rights>
+    <entry>
+        <title type="html"><![CDATA[收集box]]></title>
+        <id>https://calors.github.io/post/shou-ji-box/</id>
+        <link href="https://calors.github.io/post/shou-ji-box/">
+        </link>
+        <updated>2020-04-19T17:53:42.000Z</updated>
+        <content type="html"><![CDATA[<p>gridea 中Google分析 的 id 获取  ：google analytics<br>
+https://support.google.com/analytics/answer/1008015?hl=zh-Hans&amp;ref_topic=3544906</p>
+<p>gridea 中gitalk插件的clientid等获取<br>
+https://blog.csdn.net/u012954706/article/details/79459479</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[iOS mask layer的使用。]]></title>
-        <id>https://calors.github.io/post/ios-mask-layer-de-shi-yong</id>
-        <link href="https://calors.github.io/post/ios-mask-layer-de-shi-yong">
+        <id>https://calors.github.io/post/ios-mask-layer-de-shi-yong/</id>
+        <link href="https://calors.github.io/post/ios-mask-layer-de-shi-yong/">
         </link>
         <updated>2019-06-20T07:34:14.000Z</updated>
         <content type="html"><![CDATA[<pre><code>- (void)showWithView:(UIView *)fromView inContainer:(UIView *)container {
