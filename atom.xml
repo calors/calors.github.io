@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://calors.github.io</id>
     <title>成长</title>
-    <updated>2020-04-19T18:07:03.978Z</updated>
+    <updated>2020-04-19T18:16:15.897Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://calors.github.io"/>
     <link rel="self" href="https://calors.github.io/atom.xml"/>
@@ -10,6 +10,16 @@
     <logo>https://calors.github.io/images/avatar.png</logo>
     <icon>https://calors.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, 成长</rights>
+    <entry>
+        <title type="html"><![CDATA[notion分享主页]]></title>
+        <id>https://calors.github.io/post/notion-fen-xiang-zhu-ye/</id>
+        <link href="https://calors.github.io/post/notion-fen-xiang-zhu-ye/">
+        </link>
+        <updated>2020-04-19T18:13:58.000Z</updated>
+        <content type="html"><![CDATA[<p><a href="https://www.notion.so/calors/957a08f55105479ea594430125b5b7f8">Notion”成长“</a><br>
+后续搬到blog上。就在blog写了～</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[收集box]]></title>
         <id>https://calors.github.io/post/shou-ji-box/</id>
