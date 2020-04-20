@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://calors.github.io</id>
     <title>成长</title>
-    <updated>2020-04-19T18:39:38.327Z</updated>
+    <updated>2020-04-20T12:26:42.722Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://calors.github.io"/>
     <link rel="self" href="https://calors.github.io/atom.xml"/>
@@ -10,6 +10,72 @@
     <logo>https://calors.github.io/images/avatar.png</logo>
     <icon>https://calors.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, 成长</rights>
+    <entry>
+        <title type="html"><![CDATA[Flutter基础]]></title>
+        <id>https://calors.github.io/post/flutter-ji-chu/</id>
+        <link href="https://calors.github.io/post/flutter-ji-chu/">
+        </link>
+        <updated>2020-04-20T10:18:31.000Z</updated>
+        <content type="html"><![CDATA[<h1 id="1入口程序">1.入口程序</h1>
+<p>Flutter项目下的/lib目录下的main.dart文件，main()方法就是程序的入口</p>
+<h1 id="2material-design设计">2.Material Design设计</h1>
+<p>默认的flutter程序，使用的是Google Material设计  <code>return MaterialApp()</code></p>
+<pre><code>import 'package:flutter/material.dart';
+</code></pre>
+<p>这个包是 flutter实现 Material Design 的base包， 里面有Text、image、icon、Row、Column、 Decoration 、animation等组件</p>
+<h1 id="3flutter主题">3.flutter主题</h1>
+<p>主题有两种方式：全局主题，或使用 Theme 来定义应用程序局部的颜色和字体样式。事实上，<br>
+全局主题只是由应用程序根 MaterialApp 创建的主题（Theme）<br>
+定义一个主题后，就可以在我们自己的 Widget 使用它， Flutter 提供的 Material<br>
+Widgets 将使用主题为 AppBars Buttons Checkbox 等设置背景颜色和字体样式。</p>
+<h2 id="31全局主题">3.1全局主题</h2>
+<p>创建主题的方法是将 ThemeData 提供给 MaterialApp 构造函数，这样就可以在整个应<br>
+用程序中共享包含颜色和字体样式的主题 。</p>
+<pre><code>return MaterialApp(
+        title: 'Flutter Demo',
+        theme: ThemeData(
+            primarySwatch: Colors.blue
+            visualDensity: VisualDensity.adaptivePlatformDensity,
+        ),
+        home: MyHomePage(title: 'Flutter Demo Home Page'),
+        );
+} 
+</code></pre>
+<h2 id="32局部主题">3.2局部主题</h2>
+<p>如果想在应用程序的某一部分使用特殊的颜色，那么就需要覆盖全局的主题。有两种方法可以解决这个问题： 创建特有的主题数据或扩展父主题。</p>
+<h3 id="1-创建特有的主题数据">1. 创建特有的主题数据</h3>
+<p>实例化一个 hemeData 井将其传递给 heme 对象，代码如下：</p>
+<pre><code>new Theme (
+    //创建一个特有的主题数据
+      data: new ThemeData(
+        accentColor: Colors.yellow,
+      ),
+     child: new FloatingActionButton(
+        onPressed : () {} ,
+        child: new Icon(Icons.add),
+     ),
+ );
+</code></pre>
+<h3 id="2扩展父主题">2.扩展父主题</h3>
+<p>扩展父主题时无须覆盖所有的主题属性，可以通过使用 copyWith 方法来实现，代<br>
+码如下:</p>
+<pre><code>new Theme( 
+    // 覆盖 accentColor Colors.yellow
+    data: Theme.of(context).copyWith(accentColor: Colors.yellow), 
+    child: new FloatingActionButton( 
+        onPressed: null, 
+        child: new Icon (Icons.add) , 
+    ), 
+);
+</code></pre>
+<h2 id="33使用主题">3.3使用主题</h2>
+<p>主题定义好后就可以使用它。首先，函数Theme.of( context）可以通过上下文来获取<br>
+主题 ，方法是查找最近的主题，如找不到就会找这个应用的主题。</p>
+<h1 id="4无状态与有状态组件">4.无状态与有状态组件</h1>
+<p>无状态组件 Stateless Widget ）是不可变的，这意味着它<br>
+们的属性不能改 ，所有的值都是最终的。</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[notion分享主页]]></title>
         <id>https://calors.github.io/post/notion-fen-xiang-zhu-ye/</id>

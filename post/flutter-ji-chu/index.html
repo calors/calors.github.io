@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" >
 
-<title>关于 | 成长</title>
+<title>Flutter基础 | 成长</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
@@ -33,8 +33,10 @@
 </script>
 
 
-    <meta name="description" content="这是关于的页面，可以在这里向世界介绍你！
-" />
+    <meta name="description" content="1.入口程序
+Flutter项目下的/lib目录下的main.dart文件，main()方法就是程序的入口
+2.Material Design设计
+默认的flutter程序，使用的是Google Material设计  return Mat..." />
     <meta name="keywords" content="" />
   </head>
   <body>
@@ -114,14 +116,80 @@
       <div class="main-container">
         <div class="content-container" data-aos="fade-up">
           <div class="post-detail">
-            <h2 class="post-title">关于</h2>
-            <div class="post-date">2019-01-25</div>
+            <h2 class="post-title">Flutter基础</h2>
+            <div class="post-date">2020-04-20</div>
             
             <div class="post-content" v-pre>
-              <p>这是关于的页面，可以在这里向世界介绍你！</p>
+              <h1 id="1入口程序">1.入口程序</h1>
+<p>Flutter项目下的/lib目录下的main.dart文件，main()方法就是程序的入口</p>
+<h1 id="2material-design设计">2.Material Design设计</h1>
+<p>默认的flutter程序，使用的是Google Material设计  <code>return MaterialApp()</code></p>
+<pre><code>import 'package:flutter/material.dart';
+</code></pre>
+<p>这个包是 flutter实现 Material Design 的base包， 里面有Text、image、icon、Row、Column、 Decoration 、animation等组件</p>
+<h1 id="3flutter主题">3.flutter主题</h1>
+<p>主题有两种方式：全局主题，或使用 Theme 来定义应用程序局部的颜色和字体样式。事实上，<br>
+全局主题只是由应用程序根 MaterialApp 创建的主题（Theme）<br>
+定义一个主题后，就可以在我们自己的 Widget 使用它， Flutter 提供的 Material<br>
+Widgets 将使用主题为 AppBars Buttons Checkbox 等设置背景颜色和字体样式。</p>
+<h2 id="31全局主题">3.1全局主题</h2>
+<p>创建主题的方法是将 ThemeData 提供给 MaterialApp 构造函数，这样就可以在整个应<br>
+用程序中共享包含颜色和字体样式的主题 。</p>
+<pre><code>return MaterialApp(
+        title: 'Flutter Demo',
+        theme: ThemeData(
+            primarySwatch: Colors.blue
+            visualDensity: VisualDensity.adaptivePlatformDensity,
+        ),
+        home: MyHomePage(title: 'Flutter Demo Home Page'),
+        );
+} 
+</code></pre>
+<h2 id="32局部主题">3.2局部主题</h2>
+<p>如果想在应用程序的某一部分使用特殊的颜色，那么就需要覆盖全局的主题。有两种方法可以解决这个问题： 创建特有的主题数据或扩展父主题。</p>
+<h3 id="1-创建特有的主题数据">1. 创建特有的主题数据</h3>
+<p>实例化一个 hemeData 井将其传递给 heme 对象，代码如下：</p>
+<pre><code>new Theme (
+    //创建一个特有的主题数据
+      data: new ThemeData(
+        accentColor: Colors.yellow,
+      ),
+     child: new FloatingActionButton(
+        onPressed : () {} ,
+        child: new Icon(Icons.add),
+     ),
+ );
+</code></pre>
+<h3 id="2扩展父主题">2.扩展父主题</h3>
+<p>扩展父主题时无须覆盖所有的主题属性，可以通过使用 copyWith 方法来实现，代<br>
+码如下:</p>
+<pre><code>new Theme( 
+    // 覆盖 accentColor Colors.yellow
+    data: Theme.of(context).copyWith(accentColor: Colors.yellow), 
+    child: new FloatingActionButton( 
+        onPressed: null, 
+        child: new Icon (Icons.add) , 
+    ), 
+);
+</code></pre>
+<h2 id="33使用主题">3.3使用主题</h2>
+<p>主题定义好后就可以使用它。首先，函数Theme.of( context）可以通过上下文来获取<br>
+主题 ，方法是查找最近的主题，如找不到就会找这个应用的主题。</p>
+<h1 id="4无状态与有状态组件">4.无状态与有状态组件</h1>
+<p>无状态组件 Stateless Widget ）是不可变的，这意味着它<br>
+们的属性不能改 ，所有的值都是最终的。</p>
 
             </div>
             
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://calors.github.io/post/notion-fen-xiang-zhu-ye/">
+                  <h3 class="post-title">
+                    notion分享主页
+                  </h3>
+                </a>
+              </div>
             
 
             
